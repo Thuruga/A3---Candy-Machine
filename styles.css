@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  #maquina {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #credito {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #resultado {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
