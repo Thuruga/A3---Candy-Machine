@@ -1,30 +1,159 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
   }
   
   #maquina {
-    width: 300px;
-    margin: auto;
+    background-color: #e0e0e0;
     padding: 20px;
-    border: 2px solid #000;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #ccc;
   }
   
-  button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  #credito {
-    font-size: 20px;
+  h1 {
+    color: #333;
+    font-size: 1.5em;
     margin-bottom: 20px;
   }
   
-  #resultado {
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: bold;
+  #credito {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #555;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
   }
   
+  .botoes-moedas {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .botoes-moedas button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+  }
+  
+  .botoes-moedas button:hover {
+    background-color: #218838;
+  }
+  
+  #opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #opcoes button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+  }
+  
+  #opcoes button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  #opcoes button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  #resultado {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+  }
+  
+  /* Animação de inserção de dinheiro */
+  #animacao-dinheiro {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.5s, top 1.5s;
+  }
+  
+  @keyframes inserirDinheiro {
+    0% { top: -50px; opacity: 1; }
+    100% { top: 50%; opacity: 1; }
+  }
+  
+  .inserirDinheiro {
+    animation: inserirDinheiro 1s forwards;
+  }
+  
+
+  #saida {
+    position: relative;
+    height: 100px;
+    margin-top: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  #doce-animado {
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  #troco-animado {
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  /* Animação do doce */
+  @keyframes cairDoce {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .cairDoce {
+    animation: cairDoce 1.5s forwards;
+  }
+  
+  /* Animação do troco */
+  @keyframes cairTroco {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  .cairTroco {
+    animation: cairTroco 1.5s forwards;
+  }
