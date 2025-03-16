@@ -11,17 +11,26 @@
     <h1>Máquina de Doce</h1>
     <div id="credito">Crédito: R$ 0,00</div>
 
-    <button onclick="inserirDinheiro(1)">Inserir R$ 1,00</button>
-    <button onclick="inserirDinheiro(2)">Inserir R$ 2,00</button>
-    <button onclick="inserirDinheiro(5)">Inserir R$ 5,00</button>
+    <div class="botoes-moedas">
+      <button onclick="inserirDinheiro(1)">Inserir R$ 1,00</button>
+      <button onclick="inserirDinheiro(2)">Inserir R$ 2,00</button>
+      <button onclick="inserirDinheiro(5)">Inserir R$ 5,00</button>
+    </div>
 
     <div id="opcoes">
-      <button onclick="escolherDoce(6)">Doce A (R$ 6,00)</button>
-      <button onclick="escolherDoce(7)">Doce B (R$ 7,00)</button>
-      <button onclick="escolherDoce(8)">Doce C (R$ 8,00)</button>
+      <button id="doceA" onclick="escolherDoce(6)" disabled>Doce A (R$ 6,00)</button>
+      <button id="doceB" onclick="escolherDoce(7)" disabled>Doce B (R$ 7,00)</button>
+      <button id="doceC" onclick="escolherDoce(8)" disabled>Doce C (R$ 8,00)</button>
     </div>
 
     <div id="resultado"></div>
+
+    <div id="animacao-dinheiro">💵</div>
+
+    <div id="saida">
+      <div id="doce-animado">🍬</div>
+      <div id="troco-animado"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
