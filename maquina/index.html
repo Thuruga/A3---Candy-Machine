@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máquina de Doces Premium</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background"></div>
+  
+  <div id="maquina">
+    <h1>🍬 Máquina de Doces</h1>
+    <div id="credito">Crédito: R$ 0,00</div>
+
+    <div class="botoes-moedas">
+      <button class="moeda" onclick="inserirDinheiro(1)">💰 R$ 1,00</button>
+      <button class="moeda" onclick="inserirDinheiro(2)">💰 R$ 2,00</button>
+      <button class="moeda" onclick="inserirDinheiro(5)">💰 R$ 5,00</button>
+    </div>
+
+    <div class="vitrine">
+      <div class="linha-doce">
+        <div class="doce">
+          <span>🍫</span>
+          <button id="doceA" onclick="selecionarDoce(6, '🍫')" disabled>R$ 6,00</button>
+        </div>
+        <div class="doce">
+          <span>🍩</span>
+          <button id="doceB" onclick="selecionarDoce(7, '🍩')" disabled>R$ 7,00</button>
+        </div>
+      </div>
+      <div class="linha-doce">
+        <div class="doce">
+          <span>🍬</span>
+          <button id="doceC" onclick="selecionarDoce(8, '🍬')" disabled>R$ 8,00</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="botao-comprar" onclick="comprarDoce()" disabled>COMPRAR AGORA</button>
+
+    <div id="saida">
+      <div id="doce-animado"></div>
+      <div id="troco-animado"></div>
+    </div>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

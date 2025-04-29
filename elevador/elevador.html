@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Elevador Interativo</title>
+  <link rel="stylesheet" href="elevador.css">
+</head>
+<body>
+  <div class="elevator-container">
+    <div class="elevator-display">
+      <div id="floor-display">T</div>
+      <div class="status" id="status">Portas Abertas</div>
+    </div>
+
+    <div class="doors open">
+      <div class="door left"></div>
+      <!-- Imagem do andar (GIF ou PNG) -->
+      <img id="view-image" src="./imagens/0andar.gif" alt="Visão do andar" />
+      <div class="door right"></div>
+    </div>
+
+    <div class="control-panel">
+      <button class="floor-btn active" data-floor="0">T</button>
+      <button class="floor-btn" data-floor="1">1</button>
+      <button class="floor-btn" data-floor="2">2</button>
+      <button class="floor-btn" data-floor="3">3</button>
+    </div>
+
+    <!-- Áudios do Elevador -->
+    <audio id="door-sound"   src="./sounds/door_open.mp3"></audio>
+    <audio id="ding-sound"   src="./sounds/ding.mp3"></audio>
+    <audio id="music-sound"  src="./sounds/music.mp3" loop></audio>
+  </div>
+
+  <script src="elevador.js"></script>
+</body>
+</html>
