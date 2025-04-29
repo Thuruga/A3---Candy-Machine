@@ -55,3 +55,51 @@ O sistema é controlado por 3 principais operações:
 - **Cálculo de troco**: O troco deve ser devolvido conforme a diferença entre o valor inserido e o preço do doce selecionado, limitado a um máximo de R$12,00 inseridos.
 
 - **Controle de transições**: Moedas excedentes ao limite máximo são rejeitadas, preservando a integridade do sistema.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Projeto A3 - Case 2: Elevador
+Este trabalho propõe a utilização de um Autômato Finito com Pilha para representar o comportamento de um elevador de terréo e 3 andares:
+
+
+## ⚙️ Funcionalidades Principais
+
+- **Escolha de andar:**  
+  Aceita T, 1º andar, 2º andar, 3º andar .
+- **Abrir e fechar portas:**  
+  Conforme o usuário escolhe o andar, o sistema entende se ele deve abrir ou fechar as portas.
+- **Gestão de Estados:**  
+  Transições precisas entre 16 estados possíveis.
+- **Visual:**  
+  Funcionamento com animação e efeito sonoro.
+- **Feedback Visual:**  
+  Animações de abrir e fechar portas, além de retorno de qual andar se encontra.
+
+## 🕹️ Como Usar
+
+1. **Escolha o andar**  
+   Clique nos botões:
+   - `T`: Vá para o terréo
+   - `1`: Vá para o 1º andar
+   - `2`: Vá para o 2º andar
+   - `3`: Vá para o 3º andar
+
+
+## 🧠 Máquina de Estados Finitos
+
+### Conjunto de estados possíveis do sistema - Q: 
+Os elementos deste conjunto correspondem aos diferentes estados que a máquina pode assumir a medida em que o usuário realiza ações.
+
+Q = {qTF, q1F, q2F, q3F, qTA, q1A, q2A, q3A}
+
+  - Sufixo F: portas fechadas;
+  - Sufixo A: portas abertas;
+
+
+O sistema é controlado por 3 principais operações:
+
+- **Escolha do andar**
+
+- **Fechar portas e se movimentar para o andar**
+  
+- **Abrir portas e parar quando chegar no andar desejado**
